@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.5, 1 December 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\PassOptionsToPackage{lowtilde}{url}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[11pt, a4paper, ragged2e]{altacv}
+
+\usepackage{hyperref}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=7cm,marginparsep=1cm,top=0.5cm,bottom=0.5cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{IFBlue}{HTML}{020a40}
+\definecolor{IFDarkBlue}{HTML}{00425C}
+\definecolor{IFMediumBlue}{HTML}{17739A}
+\definecolor{IFLightBlue}{HTML}{0d54b1}
+
+\definecolor{IFGrey}{HTML}{30103a}
+\definecolor{IFDarkGrey}{HTML}{231F20}
+\definecolor{IFMediumGrey}{HTML}{4D4D4F}
+\definecolor{IFLightGrey}{HTML}{808285}
+
+\colorlet{heading}{IFBlue}
+\colorlet{accent}{IFLightBlue}
+\colorlet{emphasis}{IFMediumGrey}
+\colorlet{body}{IFDarkGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Florent Viogne}
+\tagline{Ingénieur bientôt diplômé à la recherche de son premier CDI}
+\photo{2.8cm}{photo}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{\href{mailto:viognef@gmail.com}{viognef@gmail.com}}
+  \phone{\href{tel:0616845475}{06 16 84 54 75}}
+  \location{106 cours Berriat, 38000 Grenoble}
+  \linkedin{\href{https://linkedin.com/in/florent-viogne}{florent-viogne}}
+  \
+  %\homepage{\url{http://fma.if.usp.br/~nickolas}}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Expériences}
+
+\cvevent{Apprenti ingénieur}{Orange Labs}{Sept. 2018 -- août 2021}{Meylan, Isère}{}{}
+
+\begin{itemize}
+    \item Conception et mise en \oe{}uvre de solution d’intégration continue et de collecte de métriques d’infrastructures cloud.
+    \item Projet de fin d'étude : conception et mise en \oe{}uvre d'un détecteur de pannes, à partir des métriques du système et des applications, en utilisant l'intelligence artificielle. 
+\end{itemize}
+\divider
+
+\cvevent{Développeur fullstack Java/Javascript}{Decalog}{Été 2018}{Guilherand-Granges, Ardèche}{}{}
+\begin{itemize}
+    \item Participation à la conception et au développement d'un système de gestion de bibliothèques en environnement agile
+\end{itemize}
+\divider
+
+\cvevent{Stagiaire développeur fullstack Java/Javascript}{Decalog}{Avril. 2018 -- juin 2018}{Guilherand-Granges, Ardèche}{}{}
+\begin{itemize}
+    \item Développement d’un système d’import d’abonnés dans un système de gestion de bibliothèques en environnement agile
+\end{itemize}
+\divider
+
+\cvevent{Employé saisonniers}{}{Été 2016 et 2017}{Ardèche}{}{}
+\begin{itemize}
+    \item 2017 : Mise en rayon libre-service à Hyper U (Alissas, Ardèche)
+    \item 2016 : Cariste à Rhoda Coop (Tournon-sur-Rhône, \newline Ardèche)
+\end{itemize}
+
+\cvsection{Formation}
+
+\cvevent{Diplôme d'ingénieur de l'ENSIMAG, filière ingénierie des systèmes d'informations}{Grenoble INP - ENSIMAG}{2018 -- 2021}{Grenoble, Isère}{}{}
+\divider
+
+\cvevent{DUT informatique}{IUT de Valence}{2016 -- 2018}{Valence, Drôme}{}{}
+\divider
+
+\cvevent{Classe préparatoire MPSI}{Lycée Champollion}{2015 -- 2016}{Grenoble, Isère}{}{}
+
+
+\end{document}
